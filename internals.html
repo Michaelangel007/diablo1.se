@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Internals</title>
+		<link rel='stylesheet' href='css/style.css'>
+	</head>
+	<body>
+		<h1 id='Variables'>Variables</h1>
+		<div>
+			<h2 id='dlvl'>dlvl</h2>
+			<div>
+				<p><code>dlvl</code> corresponds to a <em>dungeon level</em> and it holds a value between <code>0</code> and <code>16</code>.</p>
+<pre>
+ 0 = Tristram
+ 1 = Cathedral, level 1.
+ 2 = Cathedral, level 2.
+ 3 = Cathedral, level 3.
+ 4 = Cathedral, level 4.
+ 5 = Catacombs, level 1.
+ 6 = Catacombs, level 2.
+ 7 = Catacombs, level 3.
+ 8 = Catacombs, level 4.
+ 9 = Caves, level 1.
+10 = Caves, level 2.
+11 = Caves, level 3.
+12 = Caves, level 4.
+13 = Hell, level 1.
+14 = Hell, level 2.
+15 = Hell, level 3.
+16 = Hell, level 4.
+</pre>
+			</div>
+
+			<h2 id='dtype'>dtype</h2>
+			<div>
+				<p><code>dtype</code> corresponds to a <em>dungeon type</em> and it has the following definition:</p>
+<pre>
+0 = Tristram  (<a href='internals.html#dlvl'>dlvl</a>:       0)
+1 = Cathedral (<a href='internals.html#dlvl'>dlvl</a>:  1 -  4)
+2 = Catacombs (<a href='internals.html#dlvl'>dlvl</a>:  5 -  8)
+3 = Caves     (<a href='internals.html#dlvl'>dlvl</a>:  9 - 12)
+4 = Hell      (<a href='internals.html#dlvl'>dlvl</a>: 13 - 16)
+</pre>
+			</div>
+		</div>
+	</body>
+</html>
