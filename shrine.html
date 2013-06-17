@@ -8,8 +8,8 @@
 	<body>
 		<h1 id='Shrines'>Shrines</h1>
 		<div>
-			<p>Most <a href='shrines.html#Shrines'>shrines</a> are available in both <a href='game.html#Single Player'>single player</a> and <a href='game.html#Multi Player'>multi player</a> games. Shrines only present in <a href='shrines.html#Single Player Shrines'>single player</a> or <a href='shrines.html#Multi Player Shrines'>multi player</a> have been grouped accordingly.</p>
-			<p>All <a href='shrines.html#Shrines'>shrines</a> have a chance of appearing on any <a href='internals.html#dlvl'>dungeon level</a> between <code>1</code> and <code>16</code>, except for <a href='shrines.html#Enchanted Shrine'>Enchanted Shrines</a> which can only appear on <a href='internals.html#dlvl'>dungeon levels</a> between <code>1</code> and <code>8</code>.</p>
+			<p>Most <a href='shrine.html#Shrines'>shrines</a> are available in both <a href='game.html#Single Player'>single player</a> and <a href='game.html#Multi Player'>multi player</a> games. Shrines only present in <a href='shrine.html#Single Player Shrines'>single player</a> or <a href='shrine.html#Multi Player Shrines'>multi player</a> have been grouped accordingly.</p>
+			<p>All <a href='shrine.html#Shrines'>shrines</a> have a chance of appearing on any <a href='internals.html#dlvl'>dungeon level</a> between <code>1</code> and <code>16</code>, except for <a href='shrine.html#Enchanted Shrine'>Enchanted Shrines</a> which can only appear on <a href='internals.html#dlvl'>dungeon levels</a> between <code>1</code> and <code>8</code>.</p>
 
 			<h2 id='Mysterious Shrine'>Mysterious Shrine</h2>
 			<div>
@@ -32,12 +32,12 @@
 				<h3>Effects</h3>
 				<div>
 					<ul>
-						<li>-10 <a href='items.html#Durability'>durability</a> to a random non-<a href='items.html#Indestructible'>indestructible</a> <a href='inventory.html#Equipped Items'>equipped item</a>. [1][2]</li>
-						<li>+10 <a href='items.html#Durability'>durability</a> to all other non-<a href='items.html#Indestructible'>indestructible</a> <a href='inventory.html#Equipped Items'>equipped items</a>. [1]</li>
+						<li>-10 <a href='item.html#Durability'>durability</a> to a random non-<a href='item.html#Indestructible'>indestructible</a> <a href='inventory.html#Equipped Items'>equipped item</a>. [1][2]</li>
+						<li>+10 <a href='item.html#Durability'>durability</a> to all other non-<a href='item.html#Indestructible'>indestructible</a> <a href='inventory.html#Equipped Items'>equipped items</a>. [1]</li>
 					</ul>
 					<small>
-						[1]: Both current and maximum <a href='items.html#Durability'>durability</a> are updated.<br>
-						[2]: The lower limit of the updated <a href='items.html#Durability'>durability</a> is 1.
+						[1]: Both current and maximum <a href='item.html#Durability'>durability</a> are updated.<br>
+						[2]: The lower limit of the updated <a href='item.html#Durability'>durability</a> is 1.
 					</small>
 				</div>
 
@@ -52,9 +52,9 @@
 				<h3>Effects</h3>
 				<div>
 					<ul>
-						<li>Cast <a href='spells.html#Mana Shield'>Mana Shield</a> upon the player. [1]</li>
+						<li>Cast <a href='spell.html#Mana Shield'>Mana Shield</a> upon the player. [1]</li>
 					</ul>
-					<small>[1]: The <a href='spells.html#Spell Level'>spell level</a> is <code>2*<a href='internals.html#dtype'>dtype</a></code>.</small>
+					<small>[1]: The <a href='spell.html#Spell Level'>spell level</a> is <code>2*<a href='internals.html#dtype'>dtype</a></code>.</small>
 				</div>
 
 				<h3>Message</h3>
@@ -68,9 +68,9 @@
 				<h3>Effects</h3>
 				<div>
 					<ul>
-						<li><a href='items.html#Charges'>Recharge</a> all <a href='items.html#Staves'>staves</a>. [1]</li>
+						<li><a href='item.html#Charges'>Recharge</a> all <a href='item.html#Staves'>staves</a>. [1]</li>
 					</ul>
-					<small>[1]: This include both <a href='inventory.html#Equipped Items'>equipped staves</a> and <a href='items.html#Staves'>staves</a> in the <a href='inventory.html#Backpack'>backpack</a>.</small>
+					<small>[1]: This include both <a href='inventory.html#Equipped Items'>equipped staves</a> and <a href='item.html#Staves'>staves</a> in the <a href='inventory.html#Backpack'>backpack</a>.</small>
 				</div>
 
 				<h3>Message</h3>
@@ -84,7 +84,7 @@
 				<h3>Effects</h3>
 				<div>
 					<ul>
-						<li><a href='items.html#Durability'>Repair</a> all items. [1]</li>
+						<li><a href='item.html#Durability'>Repair</a> all items. [1]</li>
 					</ul>
 					<small>[1]: This include both <a href='inventory.html#Equipped Items'>equipped items</a> and items in the <a href='inventory.html#Backpack'>backpack</a>.</small>
 				</div>
@@ -282,19 +282,19 @@
 
 			<h2 id='Single Player Shrines'>Single Player Shrines</h2>
 			<div>
-				<p>The following <a href='shrines.html#Shrines'>shrines</a> are only present in <a href='game.html#Single Player'>single player</a> games.</p>
+				<p>The following <a href='shrine.html#Shrines'>shrines</a> are only present in <a href='game.html#Single Player'>single player</a> games.</p>
 
 				<h3 id='Gloomy Shrine'>Gloomy Shrine</h3>
 				<div>
 					<h4>Effects</h4>
 					<div>
 						<ul>
-							<li>+2 <a href='character.html#Armor Class'>armor class</a> to all <a href='items.html#Armor'>armors</a>. [1]</li>
-							<li>-1 maximum <a href='character.html#Damage'>damage</a> to all <a href='items.html#Weapons'>weapons</a>. [1][2]</li>
+							<li>+2 <a href='character.html#Armor Class'>armor class</a> to all <a href='item.html#Armor'>armors</a>. [1]</li>
+							<li>-1 maximum <a href='character.html#Damage'>damage</a> to all <a href='item.html#Weapons'>weapons</a>. [1][2]</li>
 						</ul>
 						<small>
 							[1]: This include both <a href='inventory.html#Equipped Items'>equipped items</a> and items in the <a href='inventory.html#Backpack'>backpack</a>.<br>
-							[2]: The lower limit of the updated maximum <a href='character.html#Damage'>damage</a> is the minimum <a href='character.html#Damage'>damage</a> of the <a href='items.html#Weapons'>weapon</a>.
+							[2]: The lower limit of the updated maximum <a href='character.html#Damage'>damage</a> is the minimum <a href='character.html#Damage'>damage</a> of the <a href='item.html#Weapons'>weapon</a>.
 						</small>
 					</div>
 
@@ -309,9 +309,9 @@
 					<h4>Effects</h4>
 					<div>
 						<ul>
-							<li>+1 maximum <a href='character.html#Damage'>damage</a> to all <a href='items.html#Weapons'>weapons</a>. [1]</li>
+							<li>+1 maximum <a href='character.html#Damage'>damage</a> to all <a href='item.html#Weapons'>weapons</a>. [1]</li>
 						</ul>
-						<small>[1]: This include both <a href='inventory.html#Equipped Items'>equipped weapons</a> and <a href='items.html#Weapons'>weapons</a> in the <a href='inventory.html#Backpack'>backpack</a>.</small>
+						<small>[1]: This include both <a href='inventory.html#Equipped Items'>equipped weapons</a> and <a href='item.html#Weapons'>weapons</a> in the <a href='inventory.html#Backpack'>backpack</a>.</small>
 					</div>
 
 					<h4>Message</h4>
@@ -335,7 +335,7 @@
 
 			<h2 id='Multi Player Shrines'>Multi Player Shrines</h2>
 			<div>
-				<p>The following <a href='shrines.html#Shrines'>shrines</a> are only present in <a href='game.html#Multi Player'>multi player</a> games.</p>
+				<p>The following <a href='shrine.html#Shrines'>shrines</a> are only present in <a href='game.html#Multi Player'>multi player</a> games.</p>
 
 				<h3 id='Spooky Shrine'>Spooky Shrine</h3>
 				<div>
