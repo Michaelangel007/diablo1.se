@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Chests</title>
+		<link rel='stylesheet' href='css/style.css'>
+	</head>
+	<body>
+		<h1 id='Chests'>Chests</h1>
+		<div>
+			<!--
+				ref: 445309
+			-->
+			<p>Chests always contains their maximum number of items on <a href='internals.html#quest_lvl'>quest levels</a>.</p>
+
+			<h2 id='Small Chest'>Small Chest</h2>
+			<div>
+				<p>Small chests contains between <code>0</code> and <code>1</code> items. On <a href='internals.html#quest_lvl'>quest levels</a> they always contain <code>1</code> item.</p>
+			</div>
+
+			<h2 id='Chest'>Chest</h2>
+			<div>
+				<p>Chests contains between <code>0</code> and <code>2</code> items. On <a href='internals.html#quest_lvl'>quest levels</a> they always contain <code>2</code> items.</p>
+			</div>
+
+			<h2 id='Large Chest'>Large Chest</h2>
+			<div>
+				<p>Large contains contain between <code>0</code> and <code>3</code> items. On <a href='internals.html#quest_lvl'>quest levels</a> they always contain <code>3</code> items.</p>
+			</div>
+		</div>
+
+		<h1 id='Chest Item Drops'>Chest Item Drops</h1>
+		<div>
+			<!--
+				ref: 445309
+			-->
+			<p>There is a <code>12.5%</code> probability that a chest item drop will be a <a href='chest.html#Potion or Town Portal Drop'>potion or town portal drop</a> and a <code>87.5%</code> probability that it will be an <a href='chest.html#Item Drop'>item drop</a>. On <a href='internals.html#quest_lvl'>quest levels</a> all chest item drops are <a href='chest.html#Magical Item Drop'>magical item drops</a>.</p>
+
+			<h2 id='Magical Item Drop'>Magical Item Drop</h2>
+			<div>
+				<!--
+					ref: 41B230
+				-->
+				<p>The item will be a <a href='item.html#Weapons'>weapon</a>, an <a href='item.html#Armor'>armor</a>, a piece of <a href='item.html#Jewelry'>jewelry</a> or a <a href='item.html#Books'>book</a>.</p>
+				<!--
+					ref: 41BACA
+				-->
+				<p>There is a <code>2%</code> probability that the item is <a href='unique.html#Unique Items'>unique</a>. If the item is not <a href='unique.html#Unique Items'>unique</a> it will be <a href='item.html#Magical Item'>magical</a>.</p>
+			</div>
+
+			<h2 id='Item Drop'>Item Drop</h2>
+			<div>
+				<!--
+					ref: 41B34C
+				-->
+				<p>There is a <code>26%</code> probability that the item is <a href='item.html#Gold'>gold</a> and a <code>74%</code> probability that it is <em>any</em> item, including <a href='item.html#Gold'>gold</a>.</p>
+				<!--
+					ref: 41BACA
+				-->
+				<p>There is a <code>2%</code> probability that the item is <a href='unique.html#Unique Items'>unique</a>.</p>
+			</div>
+
+			<h2 id='Potion or Town Portal Drop'>Potion or Town Portal Drop</h2>
+			<div>
+				<!--
+					ref: 41BB76
+				-->
+				<p>On <a href='internals.html#dlvl'>dungeon level</a> <code>1</code> there is a <code>50%</code> probability that the item is a <a href='item.html#Potion of Healing'>potion of healing</a> and a <code>50%</code> probability that it is a <a href='item.html#Potion of Mana'>potion of mana</a>.</p>
+				<p>On all other <a href='internals.html#dlvl'>dungeon levels</a> there is a <code>33%</code> probability that the item is a <a href='item.html#Potion of Healing'>potion of healing</a>, a <code>33%</code> probability that it is a <a href='item.html#Potion of Mana'>potion of mana</a> and a <code>33%</code> probability that it is a <a href='item.html#Scroll of Town Portal'>scroll of town portal</a>.</p>
+			</div>
+		</div>
+
+		<h1 id='Trapped Chests'>Trapped Chests</h1>
+		<div>
+			<!--
+				ref: 444331
+			-->
+			<p>There is a <code>10%</code> probability that a chest is rigged with a <a href='trap.html#Traps'>trap</a>.</p>
+			<p>In the <a href='internals.html#dtype'>Catacombs</a> the trap is one of:</p>
+			<ul>
+				<li><a href='trap.html#Arrow'>Arrow</a></li>
+				<li><a href='trap.html#Fire Arrow'>Fire Arrow</a></li>
+			</ul>
+			<p>In all other <a href='internals.html#dtype'>dungeon types</a> the trap is one of:</p>
+			<ul>
+				<li><a href='trap.html#Arrow'>Arrow</a></li>
+				<li><a href='trap.html#Fire Arrow'>Fire Arrow</a></li>
+				<li><a href='trap.html#Nova'>Nova</a></li>
+			</ul>
+		</div>
+	</body>
+</html>
