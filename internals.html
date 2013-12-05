@@ -55,21 +55,21 @@
 5 = Archbishop Lazarus' Lair
 </pre>
 			</div>
+		</div>
 
-			<h2 id='Pseudo-random'>Pseudo-random</h2>
-			<div>
-				<!--
-					ref: 465213
-				-->
-				<p>Pseudo-random number generation is implemented using a <a href='http://en.wikipedia.org/wiki/Linear_congruential_generator'>linear congruential generator</a> with a <em>multiplier</em> of <code>0x15A4E35</code> an <em>increment</em> of <code>1</code>.</p>
+		<h1 id='Pseudo-random'>Pseudo-random</h1>
+		<div>
+			<!--
+				ref: 465213
+			-->
+			<p>Pseudo-random number generation is implemented using a <a href='http://en.wikipedia.org/wiki/Linear_congruential_generator'>linear congruential generator</a> with a <em>multiplier</em> of <code>0x15A4E35</code> an <em>increment</em> of <code>1</code>.</p>
 <pre>
 <a href='internals.html#Seed'>seed</a> = 0x15A4E35 * <a href='internals.html#Seed'>seed</a> + 1
 </pre>
 
-				<h3 id='Seed'>Seed</h3>
-				<div>
-					<p>The seed is used to initialize the <a href='internals.html#Pseudo-random'>PRNG</a> to a deterministic state.</p>
-				</div>
+			<h2 id='Seed'>Seed</h2>
+			<div>
+				<p>The seed is used to initialize the <a href='internals.html#Pseudo-random'>PRNG</a> to a deterministic state.</p>
 			</div>
 		</div>
 	</body>
