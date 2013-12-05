@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Artificial Intelligence</title>
+		<link rel='stylesheet' href='css/style.css'>
+	</head>
+	<body>
+		<h1 id='Artificial Intelligence'>Artificial Intelligence</h1>
+		<div>
+			<h2 id='Activity Threshold'>Activity Threshold</h2>
+			<div>
+				<p>Each monster has an <em>activity threshold</em> which regulates its range of activities. The activity threshold is sometimes referred to as <code>squelch</code> and it holds a value between <code>0</code> and <code>255</code>.</p>
+
+				<h3 id='Inactive'>Inactive</h3>
+				<div>
+					<p>The monster is inactive if its activity threshold is equal to <code>0</code>.</p>
+				</div>
+
+				<h3 id='Active'>Active</h3>
+				<div>
+					<p>The monster is <em id='partially active'>partially active</em> if its activity threshold is between <code>1</code> and <code>254</code>, and <em id='fully active'>fully active</em> if its activity threshold is equal to <code>255</code>.</p>
+				</div>
+
+				<p>Initially each monster has an activity threshold of <code>0</code>.</p>
+
+				<p>The activity threshold of each monster is updated during the <a href='phase.html#Monster Update Phase'>monster update phase</a>, in one of two ways:</p>
+				<ul>
+					<li>If the monster is within <a href='light.html#Line of Sight'>line of sight</a> then its activity threshold is set to <code>255</code>.</li>
+					<li>If the monster is outside of <a href='light.html#Line of Sight'>line of sight</a> then its activity threshold is decremented by <code>1</code> until it reaches <code>0</code>.</li>
+				</ul>
+			</div>
+		</div>
+
+		<h1 id='Behaviors'>Behaviors</h1>
+		<div>
+			<p>Most monsters perform actions depending on the distance to their target. For future reference <code>dist</code> will be used to specify this distance, in columns or rows whichever is larger.</p>
+
+			<h2 id='The Butcher'>The Butcher</h2>
+			<div>
+				<p>The following pseudo-code describes the behavior of <em>The Butcher</em>.</p>
+<ol>
+	<li>if not <a href='monster.html#Standing (nothing)'>standing</a> or <a href='ai.html#Inactive'>inactive</a>; break.</li>
+	<li>if <code>dist</code> = 1; attack (melee).</li>
+	<li>else if <code>dist</code> &gt;= 2; walk towards target.</li>
+</ol>
+			</div>
+		</div>
+	</body>
+</html>
