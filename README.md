@@ -1,6 +1,10 @@
 mewrnd.github.io
 ================
 
+[mewrnd.github.io][]
+
+[mewrnd.github.io]: http://mewrnd.github.io/
+
 Credits
 -------
 
