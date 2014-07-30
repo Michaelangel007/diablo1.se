@@ -11,7 +11,7 @@ body
 {
 	width: 700px;
 	margin: 20px auto;
-	margin-bottom: 650px; /* make bottom fragment identifiers usable. */
+	margin-bottom: 1000px; /* make bottom fragment identifiers usable. */
 	padding: 40px;
 	border: 1px solid #CCCCCC;
 }
