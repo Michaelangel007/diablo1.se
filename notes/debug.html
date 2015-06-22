@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Debug Release of Diablo 1</title>
+		<link rel='stylesheet' href='../css/style.css'>
+	</head>
+	<body>
+		<h1 id='Debug Release of Diablo 1'>Debug Release of Diablo 1</h1>
+		<div>
+			<p>On the 26th of December 1996, version 1.0 of <code>diablo.exe</code> came into existence. Most people are aware of what happened five days later, as Blizzard <a href='http://us.blizzard.com/en-us/games/legacy/#flashtext2'>released Diablo 1 for the world to see</a>. Less known is what happened five days prior. On the 21st of December 1996, another version of <code>diablo.exe</code> came into existence, namely the <em>debug release</em> of Diablo 1, version 1.0.</p>
+
+			<h2 id='Matryoshka Dolls'>Matryoshka Dolls</h2>
+			<div>
+				<p>The <em>debug release</em> of <code>diablo.exe</code> is embedded within the MPQ archive <code>d1221a.mpq</code>, which in turn is embedded within the MPQ archive <code>diabdat.mpq</code>. A custom patch header of 36 bytes has been prepended to the <code>diablo.exe</code> executable.</p>
+
+				<p>Once the custom patch header has been removed, the <em>debug release</em> of <code>diablo.exe</code> should begin with the <code>"MZ"</code> signature and have the following SHA1 hash sum: <code>accedfe32775d4a1984451309608c2a2d39ad406</code>.</p>
+			</div>
+
+			<h2 id='Assert Strings'>Assert Strings</h2>
+			<div>
+				<p>One benefit with the <em>debug release</em> is that it contains a range of assert strings, which may give crucial insight into the inner workings of the game. For instance, the following assert strings give insight into the names of global variables, structure fields and enumerates.</p>
+				<ul>
+					<li><code>! Monsters[monst].Anims[anim].CMem</code></li>
+					<li><code>(uniquetrans &lt;&lt; 8) + 4864 &lt; LIGHTSIZE</code></li>
+					<li><code>(DWORD)monster[nummonsters]._mx &lt; MAXDUNX</code></li>
+					<li><code>plr[myplr].InvGrid[i] &lt;= plr[myplr]._pNumInv</code></li>
+				</ul>
+				<p>Furthermore, a set of distinct categories of functionality may be inferred from the source code file names (e.g. <code>c:\diablo\direct\doom.cpp</code>).</p>
+				<ul>
+					<li><b>appfat.cpp</b>: <i>Fatal application errors</i>.</li>
+					<li><b>automap.cpp</b>: <i>Automap</i>.</li>
+					<li><b>capture.cpp</b>: <i>Screenshots</i>.</li>
+					<li><b>codec.cpp</b>: <i>Encoding and decoding of save files</i>.</li>
+					<li><b>control.cpp</b>: <i>UI controls</i>.</li>
+					<li><b>cursor.cpp</b>: <i>Mouse cursor actions</i>.</li>
+					<li><b>dead.cpp</b>: <i>Dead bodies on ground</i>.</li>
+					<li><b>debug.cpp</b>: <i>Debug functions</i>.</li>
+					<li><b>diablo.cpp</b>: <i>Main functions of the game</i>.</li>
+					<li><b>doom.cpp</b>: <i>The doom quest</i>.</li>
+					<li><b>drlg_l1.cpp</b>: <i>Dungeon random layout generation of cathedral</i>.</li>
+					<li><b>drlg_l2.cpp</b>: <i>Dungeon random layout generation of catacombs</i>.</li>
+					<li><b>drlg_l3.cpp</b>: <i>Dungeon random layout generation of caves</i>.</li>
+					<li><b>drlg_l4.cpp</b>: <i>Dungeon random layout generation of hell</i>.</li>
+					<li><b>dthread.cpp</b>: <i>Dungeon thread management</i>.</li>
+					<li><b>dx.cpp</b>: <i>DirectX initialization</i>.</li>
+					<li><b>effects.cpp</b>: <i>Sound effects</i>.</li>
+					<li><b>encrypt.cpp</b>: <i>MPQ encryption</i>.</li>
+					<li><b>engine.cpp</b>: <i>CEL decoding, PRNG, memory management</i>.</li>
+					<li><b>error.cpp</b>: <i>Error dialogues used by shrines</i>.</li>
+					<li><b>gamemenu.cpp</b>: <i>Main game menu (e.g. single player, multi player)</i>.</li>
+					<li><b>gendung.cpp</b>: <i>Dungeon generation utility functions</i>.</li>
+					<li><b>gmenu.cpp</b>: <i>In-game menu</i>.</li>
+					<li><b>init.cpp</b>: <i>General initialization</i>.</li>
+					<li><b>interfac.cpp</b>: <i>Cut-scenes and progress bar interface</i>.</li>
+					<li><b>inv.cpp</b>: <i>Inventory</i>.</li>
+					<li><b>items.cpp</b>: <i>Items</i>.</li>
+					<li><b>lighting.cpp</b>: <i>Lighting effects</i>.</li>
+					<li><b>loadsave.cpp</b>: <i>Save file handling</i>.</li>
+					<li><b>minitext.cpp</b>: <i>Medium-sized text rendering</i>.</li>
+					<li><b>missiles.cpp</b>: <i>Projectiles (e.g. arrow, firebolt)</i>.</li>
+					<li><b>monster.cpp</b>: <i>Monsters</i>.</li>
+					<li><b>movie.cpp</b>: <i>Movie playing</i>.</li>
+					<li><b>mpqapi.cpp</b>: <i>MPQ functions</i>.</li>
+					<li><b>msg.cpp</b>: <i>Network messages</i>.</li>
+					<li><b>multi.cpp</b>: <i>Multi-player functions</i>.</li>
+					<li><b>nthread.cpp</b>: <i>Network thread management</i>.</li>
+					<li><b>objects.cpp</b>: <i>Objects (e.g. door, chest)</i>.</li>
+					<li><b>palette.cpp</b>: <i>Colour palettes</i>.</li>
+					<li><b>pfile.cpp</b>: <i>Player save file</i>.</li>
+					<li><b>player.cpp</b>: <i>Players (i.e. character/hero)</i>.</li>
+					<li><b>plrmsg.cpp</b>: <i>Chat messages</i>.</li>
+					<li><b>portal.cpp</b>: <i>Town portals</i>.</li>
+					<li><b>quests.cpp</b>: <i>Quests</i>.</li>
+					<li><b>scrollrt.cpp</b>: <i>Drawing functions</i>.</li>
+					<li><b>setmaps.cpp</b>: <i>Place objects in quest areas</i>.</li>
+					<li><b>sound.cpp</b>: <i>Sounds</i>.</li>
+					<li><b>stores.cpp</b>: <i>Stores (i.e. NPC item sales)</i>.</li>
+					<li><b>sync.cpp</b>: <i>Network synchronization</i>.</li>
+					<li><b>themes.cpp</b>: <i>Dungeon themes (e.g. paintings on walls, armor stands)</i>.</li>
+					<li><b>tmsg.cpp</b>: <i>Temporary network messages</i>.</li>
+					<li><b>town.cpp</b>: <i>Town rendering</i>.</li>
+					<li><b>towners.cpp</b>: <i>Town NPCs</i>.</li>
+					<li><b>trigs.cpp</b>: <i>Dungeon triggers (e.g. stairways, red portal)</i>.</li>
+					<li><b>wave.cpp</b>: <i>WAVE audio file parsing</i>.</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
