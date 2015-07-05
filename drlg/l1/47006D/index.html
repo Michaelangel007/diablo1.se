@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Add Wall Edges</title>
+		<link rel='stylesheet' href='../../../css/style.css'>
+	</head>
+	<body>
+		<h1 id='Wall Edges'>Add Wall Edges</h1>
+		<div>
+			<p><code title='0x47006D'>drlg_l1_add_wall_edges</code> adds wall edges by locating and replacing pre-described patterns of squares.</p>
+			<table class='table table-bordered'>
+				<tr>
+					<th>Before</th>
+					<th>After</th>
+				</tr>
+				<tr id='Pattern 0000'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0000</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0000_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0022' title='L1 square 0022'>
+						</map>
+						<img src='0000_a.png' alt='Pre 0000' title='Pre 0000' usemap='#map_0000_a'>
+					</td>
+					<td>
+						<map name='map_0000_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0023' title='L1 square 0023'>
+						</map>
+						<img src='0000_b.png' alt='Post 0000' title='Post 0000' usemap='#map_0000_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0001'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0001</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0001_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0022' title='L1 square 0022'>
+						</map>
+						<img src='0001_a.png' alt='Pre 0001' title='Pre 0001' usemap='#map_0001_a'>
+					</td>
+					<td>
+						<map name='map_0001_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0018' title='L1 square 0018'>
+						</map>
+						<img src='0001_b.png' alt='Post 0001' title='Post 0001' usemap='#map_0001_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0002'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0002</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0002_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0002' title='L1 square 0002'>
+						</map>
+						<img src='0002_a.png' alt='Pre 0002' title='Pre 0002' usemap='#map_0002_a'>
+					</td>
+					<td>
+						<map name='map_0002_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0007' title='L1 square 0007'>
+						</map>
+						<img src='0002_b.png' alt='Post 0002' title='Post 0002' usemap='#map_0002_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0003'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0003</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0003_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0006' title='L1 square 0006'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0022' title='L1 square 0022'>
+						</map>
+						<img src='0003_a.png' alt='Pre 0003' title='Pre 0003' usemap='#map_0003_a'>
+					</td>
+					<td>
+						<map name='map_0003_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0006' title='L1 square 0006'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0024' title='L1 square 0024'>
+						</map>
+						<img src='0003_b.png' alt='Post 0003' title='Post 0003' usemap='#map_0003_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0004'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0004</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0004_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0022' title='L1 square 0022'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0001' title='L1 square 0001'>
+						</map>
+						<img src='0004_a.png' alt='Pre 0004' title='Pre 0004' usemap='#map_0004_a'>
+					</td>
+					<td>
+						<map name='map_0004_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0024' title='L1 square 0024'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0001' title='L1 square 0001'>
+						</map>
+						<img src='0004_b.png' alt='Post 0004' title='Post 0004' usemap='#map_0004_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0005'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0005</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0005_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0001' title='L1 square 0001'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0013' title='L1 square 0013'>
+						</map>
+						<img src='0005_a.png' alt='Pre 0005' title='Pre 0005' usemap='#map_0005_a'>
+					</td>
+					<td>
+						<map name='map_0005_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0006' title='L1 square 0006'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0013' title='L1 square 0013'>
+						</map>
+						<img src='0005_b.png' alt='Post 0005' title='Post 0005' usemap='#map_0005_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0006'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0006</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0006_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0022' title='L1 square 0022'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0013' title='L1 square 0013'>
+						</map>
+						<img src='0006_a.png' alt='Pre 0006' title='Pre 0006' usemap='#map_0006_a'>
+					</td>
+					<td>
+						<map name='map_0006_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0019' title='L1 square 0019'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0013' title='L1 square 0013'>
+						</map>
+						<img src='0006_b.png' alt='Post 0006' title='Post 0006' usemap='#map_0006_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0007'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0007</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0007_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0019' title='L1 square 0019'>
+						</map>
+						<img src='0007_a.png' alt='Pre 0007' title='Pre 0007' usemap='#map_0007_a'>
+					</td>
+					<td>
+						<map name='map_0007_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0007_b.png' alt='Post 0007' title='Post 0007' usemap='#map_0007_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0008'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0008</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0008_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0022' title='L1 square 0022'>
+						</map>
+						<img src='0008_a.png' alt='Pre 0008' title='Pre 0008' usemap='#map_0008_a'>
+					</td>
+					<td>
+						<map name='map_0008_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0020' title='L1 square 0020'>
+						</map>
+						<img src='0008_b.png' alt='Post 0008' title='Post 0008' usemap='#map_0008_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0009'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0009</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0009_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0022' title='L1 square 0022'>
+						</map>
+						<img src='0009_a.png' alt='Pre 0009' title='Pre 0009' usemap='#map_0009_a'>
+					</td>
+					<td>
+						<map name='map_0009_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0023' title='L1 square 0023'>
+						</map>
+						<img src='0009_b.png' alt='Post 0009' title='Post 0009' usemap='#map_0009_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0010'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0010</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0010_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0024' title='L1 square 0024'>
+						</map>
+						<img src='0010_a.png' alt='Pre 0010' title='Pre 0010' usemap='#map_0010_a'>
+					</td>
+					<td>
+						<map name='map_0010_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0010_b.png' alt='Post 0010' title='Post 0010' usemap='#map_0010_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0011'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0011</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0011_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0019' title='L1 square 0019'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0022' title='L1 square 0022'>
+						</map>
+						<img src='0011_a.png' alt='Pre 0011' title='Pre 0011' usemap='#map_0011_a'>
+					</td>
+					<td>
+						<map name='map_0011_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0019' title='L1 square 0019'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0020' title='L1 square 0020'>
+						</map>
+						<img src='0011_b.png' alt='Post 0011' title='Post 0011' usemap='#map_0011_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0012'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0012</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0012_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0019' title='L1 square 0019'>
+						</map>
+						<img src='0012_a.png' alt='Pre 0012' title='Pre 0012' usemap='#map_0012_a'>
+					</td>
+					<td>
+						<map name='map_0012_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0012_b.png' alt='Post 0012' title='Post 0012' usemap='#map_0012_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0013'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0013</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0013_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0019' title='L1 square 0019'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0001' title='L1 square 0001'>
+						</map>
+						<img src='0013_a.png' alt='Pre 0013' title='Pre 0013' usemap='#map_0013_a'>
+					</td>
+					<td>
+						<map name='map_0013_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0019' title='L1 square 0019'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0013_b.png' alt='Post 0013' title='Post 0013' usemap='#map_0013_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0014'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0014</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0014_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0019' title='L1 square 0019'>
+						</map>
+						<img src='0014_a.png' alt='Pre 0014' title='Pre 0014' usemap='#map_0014_a'>
+					</td>
+					<td>
+						<map name='map_0014_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0014_b.png' alt='Post 0014' title='Post 0014' usemap='#map_0014_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0015'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0015</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0015_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0001' title='L1 square 0001'>
+						</map>
+						<img src='0015_a.png' alt='Pre 0015' title='Pre 0015' usemap='#map_0015_a'>
+					</td>
+					<td>
+						<map name='map_0015_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0015_b.png' alt='Post 0015' title='Post 0015' usemap='#map_0015_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0016'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0016</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0016_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0003' title='L1 square 0003'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0022' title='L1 square 0022'>
+						</map>
+						<img src='0016_a.png' alt='Pre 0016' title='Pre 0016' usemap='#map_0016_a'>
+					</td>
+					<td>
+						<map name='map_0016_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0003' title='L1 square 0003'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0024' title='L1 square 0024'>
+						</map>
+						<img src='0016_b.png' alt='Post 0016' title='Post 0016' usemap='#map_0016_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0017'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0017</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0017_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0021' title='L1 square 0021'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0001' title='L1 square 0001'>
+						</map>
+						<img src='0017_a.png' alt='Pre 0017' title='Pre 0017' usemap='#map_0017_a'>
+					</td>
+					<td>
+						<map name='map_0017_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0021' title='L1 square 0021'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0017_b.png' alt='Post 0017' title='Post 0017' usemap='#map_0017_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0018'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0018</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0018_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0001' title='L1 square 0001'>
+						</map>
+						<img src='0018_a.png' alt='Pre 0018' title='Pre 0018' usemap='#map_0018_a'>
+					</td>
+					<td>
+						<map name='map_0018_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0018_b.png' alt='Post 0018' title='Post 0018' usemap='#map_0018_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0019'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0019</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0019_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0024' title='L1 square 0024'>
+						</map>
+						<img src='0019_a.png' alt='Pre 0019' title='Pre 0019' usemap='#map_0019_a'>
+					</td>
+					<td>
+						<map name='map_0019_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0019_b.png' alt='Post 0019' title='Post 0019' usemap='#map_0019_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0020'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0020</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0020_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0004' title='L1 square 0004'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0016' title='L1 square 0016'>
+						</map>
+						<img src='0020_a.png' alt='Pre 0020' title='Pre 0020' usemap='#map_0020_a'>
+					</td>
+					<td>
+						<map name='map_0020_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0004' title='L1 square 0004'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0017' title='L1 square 0017'>
+						</map>
+						<img src='0020_b.png' alt='Post 0020' title='Post 0020' usemap='#map_0020_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0021'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0021</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0021_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0013' title='L1 square 0013'>
+						</map>
+						<img src='0021_a.png' alt='Pre 0021' title='Pre 0021' usemap='#map_0021_a'>
+					</td>
+					<td>
+						<map name='map_0021_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0017' title='L1 square 0017'>
+						</map>
+						<img src='0021_b.png' alt='Post 0021' title='Post 0021' usemap='#map_0021_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0022'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0022</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0022_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0024' title='L1 square 0024'>
+						</map>
+						<img src='0022_a.png' alt='Pre 0022' title='Pre 0022' usemap='#map_0022_a'>
+					</td>
+					<td>
+						<map name='map_0022_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0022_b.png' alt='Post 0022' title='Post 0022' usemap='#map_0022_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0023'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0023</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0023_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0013' title='L1 square 0013'>
+						</map>
+						<img src='0023_a.png' alt='Pre 0023' title='Pre 0023' usemap='#map_0023_a'>
+					</td>
+					<td>
+						<map name='map_0023_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0017' title='L1 square 0017'>
+						</map>
+						<img src='0023_b.png' alt='Post 0023' title='Post 0023' usemap='#map_0023_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0024'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0024</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0024_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0022' title='L1 square 0022'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0023' title='L1 square 0023'>
+						</map>
+						<img src='0024_a.png' alt='Pre 0024' title='Pre 0024' usemap='#map_0024_a'>
+					</td>
+					<td>
+						<map name='map_0024_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0019' title='L1 square 0019'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0023' title='L1 square 0023'>
+						</map>
+						<img src='0024_b.png' alt='Post 0024' title='Post 0024' usemap='#map_0024_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0025'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0025</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0025_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0023' title='L1 square 0023'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0019' title='L1 square 0019'>
+						</map>
+						<img src='0025_a.png' alt='Pre 0025' title='Pre 0025' usemap='#map_0025_a'>
+					</td>
+					<td>
+						<map name='map_0025_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0021' title='L1 square 0021'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0019' title='L1 square 0019'>
+						</map>
+						<img src='0025_b.png' alt='Post 0025' title='Post 0025' usemap='#map_0025_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0026'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0026</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0026_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0022' title='L1 square 0022'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0026_a.png' alt='Pre 0026' title='Pre 0026' usemap='#map_0026_a'>
+					</td>
+					<td>
+						<map name='map_0026_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0024' title='L1 square 0024'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0026_b.png' alt='Post 0026' title='Post 0026' usemap='#map_0026_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0027'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0027</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0027_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0023' title='L1 square 0023'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0027_a.png' alt='Pre 0027' title='Pre 0027' usemap='#map_0027_a'>
+					</td>
+					<td>
+						<map name='map_0027_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0021' title='L1 square 0021'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0027_b.png' alt='Post 0027' title='Post 0027' usemap='#map_0027_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0028'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0028</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0028_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0001' title='L1 square 0001'>
+						</map>
+						<img src='0028_a.png' alt='Pre 0028' title='Pre 0028' usemap='#map_0028_a'>
+					</td>
+					<td>
+						<map name='map_0028_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0001' title='L1 square 0001'>
+						</map>
+						<img src='0028_b.png' alt='Post 0028' title='Post 0028' usemap='#map_0028_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0029'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0029</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0029_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0018' title='L1 square 0018'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0029_a.png' alt='Pre 0029' title='Pre 0029' usemap='#map_0029_a'>
+					</td>
+					<td>
+						<map name='map_0029_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0021' title='L1 square 0021'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0029_b.png' alt='Post 0029' title='Post 0029' usemap='#map_0029_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0030'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0030</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0030_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0018' title='L1 square 0018'>
+						</map>
+						<img src='0030_a.png' alt='Pre 0030' title='Pre 0030' usemap='#map_0030_a'>
+					</td>
+					<td>
+						<map name='map_0030_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0018' title='L1 square 0018'>
+						</map>
+						<img src='0030_b.png' alt='Post 0030' title='Post 0030' usemap='#map_0030_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0031'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0031</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0031_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0031_a.png' alt='Pre 0031' title='Pre 0031' usemap='#map_0031_a'>
+					</td>
+					<td>
+						<map name='map_0031_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0031_b.png' alt='Post 0031' title='Post 0031' usemap='#map_0031_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0032'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0032</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0032_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0032_a.png' alt='Pre 0032' title='Pre 0032' usemap='#map_0032_a'>
+					</td>
+					<td>
+						<map name='map_0032_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0032_b.png' alt='Post 0032' title='Post 0032' usemap='#map_0032_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0033'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0033</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0033_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0022' title='L1 square 0022'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0033_a.png' alt='Pre 0033' title='Pre 0033' usemap='#map_0033_a'>
+					</td>
+					<td>
+						<map name='map_0033_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0024' title='L1 square 0024'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0033_b.png' alt='Post 0033' title='Post 0033' usemap='#map_0033_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0034'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0034</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0034_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0034_a.png' alt='Pre 0034' title='Pre 0034' usemap='#map_0034_a'>
+					</td>
+					<td>
+						<map name='map_0034_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0016' title='L1 square 0016'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0006' title='L1 square 0006'>
+						</map>
+						<img src='0034_b.png' alt='Post 0034' title='Post 0034' usemap='#map_0034_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0035'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0035</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0035_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0013' title='L1 square 0013'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0001' title='L1 square 0001'>
+						</map>
+						<img src='0035_a.png' alt='Pre 0035' title='Pre 0035' usemap='#map_0035_a'>
+					</td>
+					<td>
+						<map name='map_0035_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0016' title='L1 square 0016'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0001' title='L1 square 0001'>
+						</map>
+						<img src='0035_b.png' alt='Post 0035' title='Post 0035' usemap='#map_0035_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0036'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0036</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0036_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0016' title='L1 square 0016'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0013' title='L1 square 0013'>
+						</map>
+						<img src='0036_a.png' alt='Pre 0036' title='Pre 0036' usemap='#map_0036_a'>
+					</td>
+					<td>
+						<map name='map_0036_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0017' title='L1 square 0017'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0013' title='L1 square 0013'>
+						</map>
+						<img src='0036_b.png' alt='Post 0036' title='Post 0036' usemap='#map_0036_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0037'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0037</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0037_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0006' title='L1 square 0006'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0022' title='L1 square 0022'>
+						</map>
+						<img src='0037_a.png' alt='Pre 0037' title='Pre 0037' usemap='#map_0037_a'>
+					</td>
+					<td>
+						<map name='map_0037_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0006' title='L1 square 0006'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0007' title='L1 square 0007'>
+						</map>
+						<img src='0037_b.png' alt='Post 0037' title='Post 0037' usemap='#map_0037_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0038'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0038</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0038_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0006' title='L1 square 0006'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0022' title='L1 square 0022'>
+						</map>
+						<img src='0038_a.png' alt='Pre 0038' title='Pre 0038' usemap='#map_0038_a'>
+					</td>
+					<td>
+						<map name='map_0038_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0006' title='L1 square 0006'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0024' title='L1 square 0024'>
+						</map>
+						<img src='0038_b.png' alt='Post 0038' title='Post 0038' usemap='#map_0038_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0039'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0039</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0039_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0024' title='L1 square 0024'>
+						</map>
+						<img src='0039_a.png' alt='Pre 0039' title='Pre 0039' usemap='#map_0039_a'>
+					</td>
+					<td>
+						<map name='map_0039_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0039_b.png' alt='Post 0039' title='Post 0039' usemap='#map_0039_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0040'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0040</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0040_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0018' title='L1 square 0018'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0024' title='L1 square 0024'>
+						</map>
+						<img src='0040_a.png' alt='Pre 0040' title='Pre 0040' usemap='#map_0040_a'>
+					</td>
+					<td>
+						<map name='map_0040_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0018' title='L1 square 0018'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0040_b.png' alt='Post 0040' title='Post 0040' usemap='#map_0040_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0041'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0041</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0041_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0004' title='L1 square 0004'>
+						</map>
+						<img src='0041_a.png' alt='Pre 0041' title='Pre 0041' usemap='#map_0041_a'>
+					</td>
+					<td>
+						<map name='map_0041_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0007' title='L1 square 0007'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0004' title='L1 square 0004'>
+						</map>
+						<img src='0041_b.png' alt='Post 0041' title='Post 0041' usemap='#map_0041_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0042'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0042</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0042_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0019' title='L1 square 0019'>
+						</map>
+						<img src='0042_a.png' alt='Pre 0042' title='Pre 0042' usemap='#map_0042_a'>
+					</td>
+					<td>
+						<map name='map_0042_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0002' title='L1 square 0002'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0021' title='L1 square 0021'>
+						</map>
+						<img src='0042_b.png' alt='Post 0042' title='Post 0042' usemap='#map_0042_b'>
+					</td>
+				</tr>
+				<tr id='Pattern 0043'>
+					<td colspan='2' style='text-align: center'><em>Pattern 0043</em></td>
+				</tr>
+				<tr>
+					<td>
+						<map name='map_0043_a'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0022' title='L1 square 0022'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0018' title='L1 square 0018'>
+						</map>
+						<img src='0043_a.png' alt='Pre 0043' title='Pre 0043' usemap='#map_0043_a'>
+					</td>
+					<td>
+						<map name='map_0043_b'>
+							<area shape='rect' coords='0,0,95,223' href='../squares/index.html#0020' title='L1 square 0020'>
+							<area shape='rect' coords='96,0,191,223' href='../squares/index.html#0018' title='L1 square 0018'>
+						</map>
+						<img src='0043_b.png' alt='Post 0043' title='Post 0043' usemap='#map_0043_b'>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
